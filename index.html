@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu - Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/644498ff81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container" >
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Database Systems Project</p>
+                <h1>A Portfolio website by <span>Vishnu</span></h1>
+            </div>
+        </div>
+    </div>
+<!-- ------------------about-------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images\vishnu.jpg">   
+                </div>
+                <div class="about-col-2 ">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="about-text">
+                        Hi, this is Vishnu a 2nd year B Tech, Computer Science student. I joined the college about a year ago with anticipation and excitment and also not knowing what i want to do or like.
+                        So the process of trying to find something began, found Competitive programming, i liked it but didn't put in much effort into it, found Machine learning, found the idea of math to guess 
+                        a handwritten character or detect a objects in a image to be facinating. That's my focus as of now to cultivate this fascination.                       
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('col_act')">College Activities</p>
+                        <p class="tab-links" onclick="opentab('pers_dev')">Personal Development</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="col_act">
+                        <ul>
+                            <li>
+                                <span>Book club Coordinator </span><br>&emsp;
+                                Help generate and organise new ideas for the events and future of the club
+                            </li>
+                            <li>
+                                <span>Member of The MaRs Club</span><br>&emsp;
+                                Participating in international rover competitions
+                            </li>
+                            <li>
+                                <span>NCC cadet</span><br>&emsp;
+                                Develop a sense of comradeship and leadership qualities
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="pers_dev">
+                        <ul>
+                            <li>
+                                <span>Exploring interest in Artificial Intelligence and Machine Learning</span><br>&emsp;
+                                Main interest Intially is to make the Computer play basic(Like the Snake game) games by itself
+                            </li>
+                            <li>
+                                <span>Old and New hobbies</span><br>&emsp;
+                                Rekindle the passion in my old hobbies 
+                                and New hobbies to help character building 
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------------------games-------------------------- -->
+    <div id="games">
+        <div class="oontainer">
+            <h1 class="sub-title-game">Games</h1>
+            <p class="games-text">
+                These Games was created with the intentions of making the Computer learn by itself using various methods such as Neural Networks, Q Learning.
+                But before that i wanted to make a algorithm for searching a solution to win the game from any given state.
+                Example the Minimax algorithm and it's variants Minimax with Alpha-beta pruning,Depth-Limited Minimax
+            </p>
+            <div class="games-list">
+                <div class="game">
+                    <img src="images\tic_tac_toe_new.png" >
+                    <div class="layer">
+                        <h2>Tik Tac Toe</h2>
+                        <p>A game of X and O's where the players take turns and the first person to to get 3 in row or column or diagonally wins</p>
+                        <a href="Tic tac toe\tic_tac_toe.html" ><i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                    
+                </div>
+
+                <div class="game">
+                    <img src="images\connect_4.png " >
+                    <div class="layer">
+                        <h2>Connect 4</h2>
+                        <p>A game where players take turns to slide tiles and the first person to get 4 in a row or column or diagonally wins</p>
+                        <a href="Connect_4\connect_4.html"><i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> avvishnuram@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://github.com/corl0s"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/vishnuram_av"><i class="fa-brands fa-instagram"></i></a>
+                    
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        } 
+    </script>
+</body>
+</html>
